@@ -1,13 +1,17 @@
-import React from 'react'
+import React from "react";
 
 export const Navbar = () => {
   return (
-    <div className="navbar__container">
-      <div>LOGO</div>
-      <div>About</div>
-      <div>Experience</div>
-      <div>Contact</div>
-      <div>Resumen</div>
-    </div>
-  )
-}
+    <header className="navbar__head">
+      <nav className="navbar__container">
+        <div className="navbar__logo">LOGO</div>
+        <div className="navbar__content">
+          <div>About</div>
+          <div>Experience</div>
+          <div>Contact</div>
+          <div>Resumen</div>
+        </div>
+      </nav>
+    </header>
+  );
+};
