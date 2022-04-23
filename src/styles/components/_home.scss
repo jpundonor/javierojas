@@ -1,4 +1,27 @@
-.home__main-content{
-    background-color: $primary;
-    color: $light-purple;
+.home__container{    
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 0px;
+    h1 {
+        margin: 0px 0px 30px 4px;
+        color: $light-purple;
+        font-family: $font-mono;
+        font-weight: 300;
+        font-size: 20px;
+    }
+    h2 {
+        margin: 0px;
+        font-size: 60px;
+        line-height: 1.2;
+        color: lighten($color: $main-text, $amount: 5);
+        font-family: $font-mono;
+    }
+    p {
+        margin: 20px 0px 0px;
+        max-width: 540px;
+        line-height: 1.5;
+    }
 }
