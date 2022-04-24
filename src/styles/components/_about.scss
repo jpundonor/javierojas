@@ -1,0 +1,22 @@
+.about__content {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 50px;
+}
+.about__skills-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(140px, 200px));
+    gap: 5px 10px;
+    padding: 0px;
+    margin: 20px 20px 0px;
+    overflow: hidden;
+    list-style: none;
+    div::before {
+        content: ">";
+        position: absolute;
+        margin-left: -20px;
+        color: white;
+        font-size: 14px;
+        line-height: 12px;
+    }
+}
