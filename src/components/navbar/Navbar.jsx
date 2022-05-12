@@ -1,6 +1,13 @@
 import React from "react";
 
 export const Navbar = () => {
+  function showScroll() {
+    let navScroll = document.querySelector(".navbar__head");
+    navScroll.classList.toggle("navbar__head-scroll", window.scrollY > 0);
+    console.log("Scroll")
+  }
+  window.addEventListener('scroll', showScroll)
+
   return (
     <header className="navbar__head">
       <nav className="navbar__container">
@@ -9,7 +16,7 @@ export const Navbar = () => {
           <div>About</div>
           <div>Experience</div>
           <div>Contact</div>
-          <div>Resumen</div>
+          <div>CV</div>
         </div>
       </nav>
     </header>
