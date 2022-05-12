@@ -13,13 +13,19 @@
     transition: all 0.3s ease;
     z-index: 11;
 }
+.navbar__head-scroll{
+    height: 70px;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px -10px rgba(2,12,27,0.7);
+}
 .navbar__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
     width: 100%;
-    color: $light-purple;
+    color: $main-text;
     font-family: $font-mono;
     z-index: 12;
 }
@@ -52,29 +58,3 @@
 //       padding: 0 40px;
 //   }
 // }
-
-@media(prefers-reduced-motion: no-preference) {
-    .navbar__head{
-
-    }
-}
-// @media (prefers-reduced-motion: no-preference) {
-//     ${props =>
-//     props.scrollDirection === 'up' &&
-//       !props.scrolledToTop &&
-//       css`
-//         height: 100px;
-//         transform: translateY(0px);
-//         background-color: rgba(10, 25, 47, 0.85);
-//         box-shadow: 0 10px 30px -10px var(--navy-shadow);
-//       `};
-
-//     ${props =>
-//     props.scrollDirection === 'down' &&
-//       !props.scrolledToTop &&
-//       css`
-//         height: 70px;
-//         transform: translateY(calc(var(--nav-scroll-height) * -1));
-//         box-shadow: 0 10px 30px -10px var(--navy-shadow);
-//       `};
-//   }
