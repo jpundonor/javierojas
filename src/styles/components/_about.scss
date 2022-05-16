@@ -20,3 +20,19 @@
         line-height: 12px;
     }
 }
+.about__div-img{
+    border-radius: 5px;    
+}
+.about__img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    mix-blend-mode: hard-light;
+    border-radius: 5px;
+    filter: grayscale(100%) contrast(1);
+    transition: all .3s ease-in-out;
+    &:hover{
+        mix-blend-mode: normal;
+        filter: none;
+    }
+}
