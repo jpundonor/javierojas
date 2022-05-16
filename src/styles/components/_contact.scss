@@ -1,0 +1,67 @@
+.contact__content{
+    p{
+        margin: 20px 0px 30px;
+        max-width: 600px;
+        line-height: 1.5;
+    }
+}
+.contact__form{
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.contact__div-grid{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 0.8fr));
+    gap: 30px;
+}
+.contact__input{
+    width: 100%;
+    font-family: $font-mono;
+    font-size: 16px;
+    outline: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: darken($color: $light-purple, $amount: 15);
+    color: $main-text;
+    border: 0px;
+    &::placeholder{
+        color: $main-text;
+        opacity: 0.7;
+    }
+}
+.contact__textarea{
+    @extend .contact__input;
+    height: 100px;
+}
+.contact__submit{
+    background-color: transparent;
+    border-radius: 1px;
+    border: 1px solid $main-text;
+    font-size: 16px;
+    font-weight: bold;
+    color: $light-purple;
+    padding: 10px 30px;
+    margin-right: -20px;
+    cursor: pointer;
+    display: flex;
+    float: right;
+    font-family: $font-mono;
+    transition: all .3s ease-in-out;
+    &:hover{
+        background-color: $main-text;
+        color: darken($color: $light-purple, $amount: 20);        
+    }
+}
+.contact__span-error{
+    margin-bottom: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+.contact__success-message{
+    span{
+
+        vertical-align: middle;
+    }
+}
