@@ -1,8 +1,8 @@
 import React from 'react'
-import { About } from './About'
-import { Contact } from './Contact'
-import { Experience } from './Experience'
-import { Home } from './Home'
+import { About } from '../about/About'
+import { Contact } from '../contact/Contact'
+import { Experience } from '../experience/Experience'
+import { Home } from '../home/Home'
 
 export const Main = () => {
   return (
