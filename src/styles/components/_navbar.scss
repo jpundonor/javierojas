@@ -53,6 +53,15 @@
         }
     }
 }
+.navbar__cv{
+    a{
+        text-decoration: none;
+        color: $main-text;
+        &:hover{
+            color: lighten($color: $light-purple, $amount: 20);
+        }
+    }
+}
 // @media screen (max-width: 1080px) {
 //   .navbar__head {
 //       padding: 0 40px;
