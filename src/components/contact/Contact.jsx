@@ -19,7 +19,7 @@ export const Contact = () => {
   // };
 
   return (
-    <section className="">
+    <section className="" id="contact">
       <div>
         <h1 className="section-title">Contact me</h1>
       </div>

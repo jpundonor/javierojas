@@ -16,7 +16,7 @@
             color: lighten($color: $main-text, $amount: 15);
         }
         .experience__icon-folder{
-            filter: invert(88%) sepia(3%) saturate(3453%) hue-rotate(206deg) brightness(100%) contrast(98%);
+            filter: $icon-hover
         }
     }
     
@@ -29,12 +29,12 @@
 }
 .experience__icon-external-link{
     width: 25px;
-    filter: invert(77%) sepia(3%) saturate(3453%) hue-rotate(206deg) brightness(92%) contrast(98%);
+    filter: $icon-primary
 }
 .experience__icon-folder{
     width: 40px;
     transition: all .3s ease-in-out;
-    filter: invert(77%) sepia(3%) saturate(3453%) hue-rotate(206deg) brightness(92%) contrast(98%);
+    filter: $icon-primary
 }
 .experience__footer{
     display: flex;

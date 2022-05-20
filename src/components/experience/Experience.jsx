@@ -5,7 +5,7 @@ export const Experience = () => {
   const Folder = "/assets/icons/folder.svg";
 
   return (
-    <section className="">
+    <section className="" id="experience">
       <div>
         <h1 className="section-title">Experience</h1>
       </div>

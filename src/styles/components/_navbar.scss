@@ -41,22 +41,15 @@
 .navbar__content {
     display: flex;
     align-items: center;
-    div{
+    a{
         margin: 0px 15px;
         position: relative;
         font-size: 14px;
         font-family: $font-mono;
         transition: all .3s ease;
-        cursor: pointer;
-        &:hover{
-            color: lighten($color: $light-purple, $amount: 20);
-        }
-    }
-}
-.navbar__cv{
-    a{
-        text-decoration: none;
         color: $main-text;
+        cursor: pointer;
+        text-decoration: none;
         &:hover{
             color: lighten($color: $light-purple, $amount: 20);
         }
