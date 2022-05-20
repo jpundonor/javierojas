@@ -1,13 +1,18 @@
 /* $deep_purple: #2C0042; */
 
 // Font
-$font-mono: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
-$font-cal: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
+$font-mono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+$font-cal: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
 
 // Colors
 $primary: #2C0042;
 $light-purple: #93329E;
 $main-text: #B4AEE8;
+
+// Icons colors
+$icon-primary: invert(77%) sepia(3%) saturate(3453%) hue-rotate(206deg) brightness(92%) contrast(98%);
+$icon-hover: invert(88%) sepia(3%) saturate(3453%) hue-rotate(206deg) brightness(100%) contrast(98%);
+// $icon-hover: invert(23%) sepia(69%) saturate(1757%) hue-rotate(269deg) brightness(98%) contrast(93%);
 
 // $primary: #2C0042;
 // $light-purple: #C3A9D0;

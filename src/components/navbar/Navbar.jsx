@@ -14,10 +14,10 @@ export const Navbar = () => {
       <nav className="navbar__container">
         <div className="navbar__logo">LOGO</div>
         <div className="navbar__content">
-          <div>About</div>
-          <div>Experience</div>
-          <div>Contact</div>
-          <div className="navbar__cv"><a href={CV} target="_blank" rel="noreferrer">CV</a></div>
+          <a href="/#about">About</a>
+          <a href="/#experience">Experience</a>
+          <a href="/#contact">Contact</a>
+          <a href={CV} target="_blank" rel="noreferrer">CV</a>
         </div>
       </nav>
     </header>

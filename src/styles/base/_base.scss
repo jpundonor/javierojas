@@ -1,6 +1,8 @@
 * {
     font-family: Helvetica, Arial, sans-serif;
     margin: 0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 html, body {
@@ -69,6 +71,19 @@ main {
 .pointer {
     cursor: pointer;
 }
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background-color: $primary;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: $light-purple;
+    border-radius: 10px;
+}
+
 @media (max-width: 1080px) {
     .section-title::after {
         width: 200px;
