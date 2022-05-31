@@ -6,6 +6,8 @@ export const ExperienceElement = ({
   link,
   paragraph,
   experiences = [],
+  detail,
+  imgs
 }) => {
   const [elementModal, setElementModal] = useState(false);
   const OpenInNew = "/assets/icons/open_in_new.svg";
@@ -52,7 +54,7 @@ export const ExperienceElement = ({
           </footer>
         </div>
       </div>
-      {elementModal && <ElementPreview elementModal={elementModal} setElementModal={setElementModal} />}
+      {elementModal && <ElementPreview elementModal={elementModal} setElementModal={setElementModal} detail={detail} imgs={imgs}/>}
     </>
   );
 };

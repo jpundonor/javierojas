@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 
-export const ElementPreview = ({ elementModal, setElementModal }) => {
-  const imgHomeRubits = "/assets/img/imgProyects/rubitsWorks/Home.jpg";
-  const imgHowRubits = "/assets/img/imgProyects/rubitsWorks/HowItWorks.jpg";
-  const imgProyectRubits = "/assets/img/imgProyects/rubitsWorks/Proyects.jpg";
+export const ElementPreview = ({
+  elementModal,
+  setElementModal,
+  detail,
+  imgs,
+}) => {
+  const [slideIndex, setSlideIndex] = useState(0);
 
   function closeModal() {
     setElementModal(!elementModal);
@@ -13,31 +16,15 @@ export const ElementPreview = ({ elementModal, setElementModal }) => {
     event.target === modal && closeModal();
   };
 
-  let slideIndex = 1;
-  showSlides(slideIndex);
-
-  function plusSlide(n) {
-    // showSlides(slideIndex += n)
-    console.log(n);
-  }
-  function currentSlide(n) {
-    // showSlides(slideIndex = n)
-    console.log(n);
-  }
-  function showSlides(n) {
-    // let slides = document.querySelectorAll(".experience__carousel-slide");
-    // let quadrates = document.querySelectorAll(".experience__carousel-quadrate");
-    // n > slides.length && (slideIndex = 1);
-    // n < 1 && (slideIndex = slideIndex.length)
-    // for(let i = 0; i < slides.length; i++){
-    //   slides[i].style.display = "none"
-    // }
-    // for(let i = 0; i < quadrates.length; i++){
-    //   quadrates[i].className = quadrates[i].className.replace("active", "")
-    // }
-    // slides[slideIndex-1].style.display = "block";
-    // quadrates[slideIndex-1].className += "active";
-  }
+  const nextSlide = () => {
+    slideIndex < (imgs.length - 1) && setSlideIndex(slideIndex + 1);
+    slideIndex == (imgs.length -1) && setSlideIndex(0)
+    console.log("test ",slideIndex)
+  };
+  const prevSlide = () => {
+    slideIndex > 0 && setSlideIndex(slideIndex - 1);
+    slideIndex === 0 && setSlideIndex(imgs.length -1)
+  };
 
   return (
     <div className="experience__element-modal" id="myModal">
@@ -48,44 +35,37 @@ export const ElementPreview = ({ elementModal, setElementModal }) => {
 
         <div className="experience__carousel">
           <div>
-            <span className="experience__carousel-prev" onClick={plusSlide(-1)}>
+            <span className="experience__carousel-prev" onClick={prevSlide}>
               &#10094;
             </span>
           </div>
           <div>
-            <div className="experience__carousel-slide fade">
-              <img src={imgHomeRubits} alt="Home-RubitsWorks" />
-            </div>
-            <div className="experience__carousel-slide fade hidden">
-              <img src={imgHowRubits} alt="How-RubitsWorks" />
-            </div>
-            <div className="experience__carousel-slide fade hidden">
-              <img src={imgProyectRubits} alt="Proyects-RubitsWorks" />
-            </div>
+            {imgs.map(
+              (img) =>
+                img.id == slideIndex && (
+                  <div key={img.id} className="experience__carousel-slide">
+                    <img src={img.img} alt="RubitsWorks" />
+                  </div>
+                )
+            )}            
           </div>
-
           <div>
-            <span className="experience__carousel-next" onClick={plusSlide(1)}>
+            <span className="experience__carousel-next" onClick={nextSlide}>
               &#10095;
             </span>
           </div>
         </div>
 
         <div className="experience__carousel-selector">
-          <span
-            className="experience__carousel-quadrate"
-            onClick={currentSlide(1)}
-          ></span>
-          <span
-            className="experience__carousel-quadrate"
-            onClick={currentSlide(2)}
-          ></span>
-          <span
-            className="experience__carousel-quadrate"
-            onClick={currentSlide(3)}
-          ></span>
+          {imgs.map((current) => (
+            <span
+              key={current.id}
+              className={"experience__carousel-quadrate " + (current.id == slideIndex && "active")}
+              // onClick={() => setSlideIndex(current.id)}
+            ></span>
+          ))}
         </div>
-        <div className="experience__paragraph">Descripcion del proyecto</div>
+        <div className="experience__paragraph">{detail}</div>
       </div>
     </div>
   );

@@ -105,13 +105,11 @@
     justify-content: center;
     align-items: center;
     background-color: black;
+    transition: all .3s ease-in-out;
     img {
         width: 100%;
         object-fit: cover;
     }
-}
-.hidden{
-    display: none;
 }
 
 .experience__carousel-prev, .experience__carousel-next{
@@ -135,7 +133,7 @@
     text-align: center;
 }
 .experience__carousel-quadrate{
-    cursor: pointer;
+    // cursor: pointer;
     height: 6px;
     width: 50px;
     margin: 10px 4px 0px 4px;
@@ -143,9 +141,12 @@
     display: inline-block;
     transition: all .3s ease-in-out;
     border-radius: 4px;
-    &:hover, .active{
-        background-color: $light-purple;
-    }
+    // &:hover{
+    //     background-color: $light-purple;
+    // }
+}
+.active{
+    background-color: $light-purple;
 }
 .experience__paragraph{
     width: 100%;
