@@ -18,9 +18,10 @@ body {
 section {
     color: $main-text;
     margin: 0px auto;
-    padding: 100px 0px;
+    padding: 120px 0px;
     max-width: 1000px;
     box-sizing: border-box;
+    transition: all .3s ease-in-out;
 }
 .section-title {
     display: flex;
@@ -30,6 +31,7 @@ section {
     margin: 10px 0px 40px;
     font-size: 25px;
     white-space: nowrap;
+    transition: all .3s ease-in-out;
     &::before {
         content: "";
         width: 50px;
@@ -38,6 +40,7 @@ section {
         position: relative;
         background-color: white;
         margin-right: 10px;
+        transition: all .3s ease-in-out;
     }
     &::after {
         content: "";
@@ -47,6 +50,7 @@ section {
         position: relative;
         background-color: white;
         margin-left: 10px;
+        transition: all .3s ease-in-out;
     }
 }
 p {
@@ -87,5 +91,13 @@ main {
 @media (max-width: 1080px) {
     .section-title::after {
         width: 200px;
+    }
+}
+@media (max-width: 768px) {
+    .section-title::before {
+        width: 0px;
+    }
+    .section-title::after {
+        width: 100%;
     }
 }

@@ -1,9 +1,10 @@
-.contact__section{
+.contact__section {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;    
+    flex-direction: column;
 }
+
 .contact__title {
     display: flex;
     width: 100%;
@@ -12,6 +13,7 @@
     margin: 20px 0px 40px;
     font-size: 25px;
     white-space: nowrap;
+    transition: all .3s ease-in-out;
     &::before {
         content: "";
         width: 160px;
@@ -20,7 +22,9 @@
         position: relative;
         background-color: white;
         margin-right: 10px;
+        transition: all .3s ease-in-out;
     }
+
     &::after {
         content: "";
         width: 160px;
@@ -29,29 +33,34 @@
         position: relative;
         background-color: white;
         margin-left: 10px;
+        transition: all .3s ease-in-out;
     }
 }
-.contact__content{
-    p{
+
+.contact__content {
+    p {
         margin: 0px 0px 30px;
         max-width: 600px;
         line-height: 1.5;
     }
 }
-.contact__form{
+
+.contact__form {
     width: 100%;
     max-width: 600px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
+
 }
-.contact__div-grid{
+
+.contact__div-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 0.8fr));
     gap: 10px;
 }
-.contact__input{
+
+.contact__input {
     width: 100%;
     font-family: $font-mono;
     font-size: 16px;
@@ -61,16 +70,19 @@
     background-color: darken($color: $light-purple, $amount: 15);
     color: $main-text;
     border: 0px;
-    &::placeholder{
+
+    &::placeholder {
         color: $main-text;
         opacity: 0.7;
     }
 }
-.contact__textarea{
+
+.contact__textarea {
     @extend .contact__input;
     height: 100px;
 }
-.contact__submit{
+
+.contact__submit {
     background-color: transparent;
     border-radius: 1px;
     border: 1px solid $main-text;
@@ -83,19 +95,44 @@
     float: right;
     font-family: $font-mono;
     transition: all .3s ease-in-out;
-    &:hover{
+
+    &:hover {
         background-color: $main-text;
-        color: darken($color: $light-purple, $amount: 20);        
+        color: darken($color: $light-purple, $amount: 20);
     }
 }
-.contact__span-error{
+
+.contact__span-error {
     margin-bottom: 20px;
     font-size: 12px;
     font-weight: bold;
 }
-.contact__success-message{
-    span{
+
+.contact__success-message {
+    span {
 
         vertical-align: middle;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact__form {
+        max-width: 768px;
+    }
+    .contact__div-grid {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        gap: 0px;
+    }
+    .contact__section{
+        display: block;
+    }
+    .contact__title {
+        &::before {
+            width: 0px;
+        }
+
+        &::after {
+            width: 100%;
+        }
     }
 }
