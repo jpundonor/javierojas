@@ -13,12 +13,14 @@
     transition: all 0.3s ease;
     z-index: 11;
 }
-.navbar__head-scroll{
+
+.navbar__head-scroll {
     height: 70px;
     background-color: transparent;
     backdrop-filter: blur(10px);
-    box-shadow: 0 10px 30px -10px rgba(2,12,27,0.7);
+    box-shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.7);
 }
+
 .navbar__container {
     display: flex;
     justify-content: space-between;
@@ -29,19 +31,31 @@
     font-family: $font-mono;
     z-index: 12;
 }
+
 .navbar__logo {
     display: flex;
     align-items: center;
     cursor: pointer;
-    transition: all .3s ease;
-    &:hover{
-        color: lighten($color: $light-purple, $amount: 20);
+    transition: all .3s ease-in-out;
+
+    a {
+        text-decoration: none;
+        color: $main-text;
+        transition: all .3s ease-in-out;
+
+        &:hover {
+            color: lighten($color: $light-purple, $amount: 20);
+        }
     }
+
 }
+
 .navbar__content {
     display: flex;
     align-items: center;
-    a{
+    transition: all .3s ease-in-out;
+
+    a {
         margin: 0px 15px;
         position: relative;
         font-size: 14px;
@@ -50,13 +64,73 @@
         color: $main-text;
         cursor: pointer;
         text-decoration: none;
-        &:hover{
+
+        &:hover {
             color: lighten($color: $light-purple, $amount: 20);
         }
     }
 }
-// @media screen (max-width: 1080px) {
-//   .navbar__head {
-//       padding: 0 40px;
-//   }
-// }
+
+.navbar__content-mobile {
+    display: none;
+}
+
+.navbar__menu-icon {
+    transition: all .3s ease-in-out;
+    display: none;
+}
+
+
+@media (max-width: 768px) {
+    .navbar__head {
+        height: 70px;
+    }
+
+    .navbar__content {
+        display: none;
+    }
+
+    .navbar__content-mobile {
+        padding: 0px 20px;
+        width: 100%;
+        display: flex;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        flex-direction: column;
+        margin: auto;
+        background-color: darken($color: $light-purple, $amount: 15);
+        box-shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.7);
+        opacity: 0.9;
+        align-items: flex-start;
+        transform: translateY(70px);
+        animation: slidein .3s forwards;
+
+        a {
+            padding: 10px;
+
+            &:hover {
+                color: $primary;
+            }
+        }
+    }
+
+    @keyframes slidein {
+        from {
+            transform: translateY(50px);
+        }
+
+        to {
+            transform: translateY(70px);
+        }
+    }
+
+    .navbar__menu-icon {
+        display: block;
+
+        img {
+            width: 40px;
+        }
+    }
+}
