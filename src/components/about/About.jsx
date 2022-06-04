@@ -3,7 +3,7 @@ import React from "react";
 export const About = () => {
   const profileImg = "/assets/img/javi2.jpg";
   return (
-    <section className="" id="about">
+    <section id="about">
       <div>
         <h1 className="section-title">About Me</h1>
       </div>

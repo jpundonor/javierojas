@@ -11,7 +11,7 @@ export const ExperienceElement = ({
 }) => {
   const [elementModal, setElementModal] = useState(false);
   const OpenInNew = "/assets/icons/open_in_new.svg";
-  const Folder = "/assets/icons/folder.svg";
+  const Folder = "/assets/icons/see.svg";
 
   function openModal() {
     setElementModal(!elementModal);
@@ -54,7 +54,7 @@ export const ExperienceElement = ({
           </footer>
         </div>
       </div>
-      {elementModal && <ElementPreview elementModal={elementModal} setElementModal={setElementModal} detail={detail} imgs={imgs}/>}
+      {elementModal && <ElementPreview elementModal={elementModal} setElementModal={setElementModal} title={title} detail={detail} imgs={imgs}/>}
     </>
   );
 };
