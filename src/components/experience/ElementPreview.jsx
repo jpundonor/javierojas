@@ -4,6 +4,7 @@ export const ElementPreview = ({
   elementModal,
   setElementModal,
   title,
+  link,
   detail,
   imgs,
 }) => {
@@ -31,8 +32,39 @@ export const ElementPreview = ({
   return (
     <div className="experience__element-modal" id="myModal">
       <div className="experience__modal-container">
-        <header className="expecience__modal-head">
-          <p>{title}</p>
+        <div className="experience__carousel-slide">
+          {imgs.map(
+            (img) =>
+              img.id == slideIndex && (
+                <img key={img.id} src={img.img} alt={title} />
+              )
+          )}
+          <span className="experience__prev-next left" onClick={prevSlide}>
+            &#10094;
+          </span>
+          <span className="experience__prev-next right" onClick={nextSlide}>
+            &#10095;
+          </span>
+        </div>
+
+        <div className="experience__paragraph">
+          <h3>{title}</h3>
+          <span />
+          {detail}
+        </div>
+
+        <footer className="experience__modal-footer">
+          {link && (
+            <a
+              href={link}
+              aria-label="External Link"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="expercience__modal-link"
+            >
+              View site
+            </a>
+          )}
           <span className="experience__modal-close">
             <img
               onClick={closeModal}
@@ -41,43 +73,7 @@ export const ElementPreview = ({
               alt="Close Preview"
             />
           </span>
-        </header>
-        <div className="experience__carousel">
-          <div>
-            <span className="experience__prev-next" onClick={prevSlide}>
-              &#10094;
-            </span>
-          </div>
-          <div>
-            {imgs.map(
-              (img) =>
-                img.id == slideIndex && (
-                  <div key={img.id} className="experience__carousel-slide">
-                    <img src={img.img} alt="RubitsWorks" />
-                  </div>
-                )
-            )}
-          </div>
-          <div>
-            <span className="experience__prev-next" onClick={nextSlide}>
-              &#10095;
-            </span>
-          </div>
-        </div>
-
-        <div className="experience__carousel-selector">
-          {imgs.map((current) => (
-            <span
-              key={current.id}
-              className={
-                "experience__carousel-quadrate " +
-                (current.id == slideIndex && "active")
-              }
-              // onClick={() => setSlideIndex(current.id)}
-            ></span>
-          ))}
-        </div>
-        <div className="experience__paragraph">{detail}</div>
+        </footer>
       </div>
     </div>
   );
