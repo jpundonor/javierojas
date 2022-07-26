@@ -54,7 +54,7 @@ export const ExperienceElement = ({
           </footer>
         </div>
       </div>
-      {elementModal && <ElementPreview elementModal={elementModal} setElementModal={setElementModal} title={title} detail={detail} imgs={imgs}/>}
+      {elementModal && <ElementPreview elementModal={elementModal} setElementModal={setElementModal} title={title} detail={detail} imgs={imgs} link={link}/>}
     </>
   );
 };
