@@ -11,8 +11,8 @@ export const Home = () => {
       </div>
       <div className="">
         <p>
-          I'm a programmer analyst graduate from Inacap, lookin to expand my
-          creation of digital experiences
+          I am a programmer looking to expand my creation of digital
+          experiences.
         </p>
       </div>
     </section>
