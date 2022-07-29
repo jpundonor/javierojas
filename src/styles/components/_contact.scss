@@ -14,7 +14,7 @@
     font-size: 25px;
     white-space: nowrap;
     transition: all .3s ease-in-out;
-    &::before {
+    &::before, &::after {
         content: "";
         width: 160px;
         height: 1px;
@@ -22,16 +22,6 @@
         position: relative;
         background-color: white;
         margin-right: 10px;
-        transition: all .3s ease-in-out;
-    }
-
-    &::after {
-        content: "";
-        width: 160px;
-        height: 1px;
-        display: block;
-        position: relative;
-        background-color: white;
         margin-left: 10px;
         transition: all .3s ease-in-out;
     }

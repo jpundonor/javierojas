@@ -10,14 +10,15 @@ export const About = () => {
       <div className="about__content">
         <div>
           <p>
-            Hello! My name is Javier Rojas y me gusta crear experiecias
-            digitales. Tengo como por objetivo trabajar idealmente de manera
-            autonoma
+            Hello! My name is Javier Rojas and I like to create digital
+            experiences. My goal is to acquire enough knowledge to ideally work
+            independently.
           </p>
           <p>
-            Aqui es donde tengo que rellenar con mas texto. Queda pendiente el
-            about.
+            I am currently learning on my own, although I have not yet had any
+            work experience beyond my internship.
           </p>
+          <p>So for now, I intend to practice with small projects.</p>
           <p>Some of the technologies I work with:</p>
           <div className="about__skills-list">
             <div>Html</div>

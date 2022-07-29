@@ -4,9 +4,9 @@ export const experiences = [
         'title': 'Rubits Works Spa.',
         'link': 'https://www.rubits.works/',
         'description': 'Internship, support in the front-end development of the Rubits Works website.',
-        'detail': `Trabajé con un equipo de tres desarrolladores para construir un sitio web de busqueda de empleo para Rubits Works,
-            una ambiciosa startup de La Serena, Chile.
-            Llegue a este equipo como apoyo al desarrollo de front-end utilizando tecnologias como React js. y Tailwind.`,
+        'detail': `I worked with a team of three developers to build a job search website for Rubits Works,
+            an ambitious startup from La Serena, Chile. I joined this team as front-end development support 
+            using technologies like React js. and Tailwind.`,
         'technologies': ["React.js", "Tailwind"],
         'imgs': [
             { 'id': '0', 'img': '/assets/img/imgProyects/rubitsWorks/rubits1.jpg' },
@@ -18,10 +18,10 @@ export const experiences = [
         'id': 'my-game',
         'title': 'My Game',
         'link': 'https://jardlml.itch.io/neonships',
-        'description': 'Internship, support in the front-end development of the Rubits Works website.',
-        'detail': `Este es un proyecto personal, creado inicialmente con el fin de aprender a desarrollar videojuegos,
-            donde experimente a base de cursos y por cuenta propia lo que significa este mundillo.
-            Esto fue desarrollado con el motor de videojuegos Unreal engine 4 y para los modelos 3d utilice Blender.`,
+        'description': 'A first and small project giving me an approach to the world of videogames.',
+        'detail': `This is a personal project, created initially with the purpose of learning how to develop videogames, 
+            where I experimented with courses and on my own what this world means.
+            This was developed with the video game engine Unreal engine 4 and for the 3d models I used Blender.`,
         'technologies': ["Unreal-Engine 4", "Blender"],
         'imgs': [
             { 'id': '0', 'img': '/assets/img/imgProyects/myGame/my-game1.jpg' },
@@ -29,5 +29,5 @@ export const experiences = [
             { 'id': '2', 'img': '/assets/img/imgProyects/myGame/my-game3.jpg' }
         ]
     }
-    
+
 ]

@@ -52,8 +52,9 @@
 }
 
 .experience__footer {
-    display: flex;
-    justify-content: left;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 10px;
     font-size: 14px;
 
     span {
