@@ -26,12 +26,15 @@ export const Contact = () => {
       <div className="contact__content">
         <p>
           I'm currently looking for new opportunities to expand my knowledge and
-          experience. If you have any questions or want to work together. Don't
-          hesitate to contact me.
+          experience, if you have any questions or want to work together, don't
+          doubt to contact me.
         </p>
       </div>
       <div className="contact__form">
-        <form action="https://formsubmit.co/ca6d457d32b85df06847a70ae85161aa" method="POST">
+        <form
+          action="https://formsubmit.co/ca6d457d32b85df06847a70ae85161aa"
+          method="POST"
+        >
           {/* <form onSubmit={handleSubmit(onSubmit)}> */}
           <div className="contact__div-grid">
             <div>
@@ -92,7 +95,11 @@ export const Contact = () => {
           )} */}
           <div className="contact__success-message">
             {/* <span>{successMessage}</span> */}
-            <input type="submit" className="contact__submit" value=" Send message!" />
+            <input
+              type="submit"
+              className="contact__submit"
+              value=" Send message!"
+            />
           </div>
           <input type="hidden" name="_next" value="http://localhost:3000/" />
           <input type="hidden" name="_captcha" value="false" />

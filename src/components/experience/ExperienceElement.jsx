@@ -7,7 +7,7 @@ export const ExperienceElement = ({
   paragraph,
   experiences = [],
   detail,
-  imgs
+  imgs,
 }) => {
   const [elementModal, setElementModal] = useState(false);
   const OpenInNew = "/assets/icons/open_in_new.svg";
@@ -44,17 +44,28 @@ export const ExperienceElement = ({
             </a>
           )}
         </header>
-        <h3>{title}</h3>
-        <p>{paragraph}</p>
-        <div>
-          <footer className="experience__footer">
-            {experiences.map((exp, index) => (
-              <span key={index}>{exp}</span>
-            ))}
-          </footer>
+        <div className="pointer" onClick={openModal}>
+          <h3>{title}</h3>
+          <p>{paragraph}</p>
+          <div>
+            <footer className="experience__footer">
+              {experiences.map((exp, index) => (
+                <span key={index}>{exp}</span>
+              ))}
+            </footer>
+          </div>
         </div>
       </div>
-      {elementModal && <ElementPreview elementModal={elementModal} setElementModal={setElementModal} title={title} detail={detail} imgs={imgs} link={link}/>}
+      {elementModal && (
+        <ElementPreview
+          elementModal={elementModal}
+          setElementModal={setElementModal}
+          title={title}
+          detail={detail}
+          imgs={imgs}
+          link={link}
+        />
+      )}
     </>
   );
 };
