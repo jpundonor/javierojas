@@ -18,7 +18,7 @@ export const About = () => {
             I am currently learning on my own, although I have not yet had any
             work experience beyond my internship.
           </p>
-          <p>So for now, I intend to practice with small projects.</p>
+          <p>For now, I intend to practice with small projects.</p>
           <p>Some of the technologies I work with:</p>
           <div className="about__skills-list">
             <div>Html</div>

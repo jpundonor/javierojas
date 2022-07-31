@@ -16,17 +16,28 @@
     h3 {
         padding-bottom: 10px;
         transition: all .3s ease-in-out;
+        color: lighten($color: $main-text, $amount: 15);
     }
 
     &:hover {
         transform: translateY(-5%);
+        background-color: white;
+        color: $light-purple;
 
         h3 {
-            color: lighten($color: $main-text, $amount: 15);
+            // color: lighten($color: $main-text, $amount: 15);
+            color: $primary;
         }
 
         .experience__icon-folder {
-            filter: $icon-hover
+            // filter: $icon-hover
+            filter: $icon-rev-color;
+        }
+        .experience__icon-external-link {
+            filter: $icon-rev-color;
+        }
+        .experience__footer {
+            color: $orange;
         }
     }
 
@@ -47,7 +58,8 @@
 .experience__icon-folder {
     width: 40px;
     transition: all .3s ease-in-out;
-    filter: $icon-primary;
+    // filter: $icon-primary;
+    filter: $icon-hover;
     cursor: pointer;
 }
 
@@ -56,6 +68,7 @@
     bottom: 0;
     margin-bottom: 10px;
     font-size: 14px;
+    // color: $orange;
 
     span {
         padding-right: 10px;
@@ -248,8 +261,13 @@
 .expercience__modal-link{
     text-decoration: none;
     user-select: none;
-    border: 1px solid;
+    border: 1px solid $primary;
     padding: 8px 10px;
+    transition: all .3s ease-in-out;
+    &:hover{
+        background-color: $primary;
+        color: $main-text;
+    }
 }
 
 @media (max-width: 1080px) {

@@ -6,11 +6,34 @@
     margin: 0px auto;
 }
 
+.main__separation {
+    width: 100vw;
+    height: 0;
+    margin-top: 100px;
+    border-top: 100px solid $primary;
+    border-right: 60vw solid white;
+    border-left: 40vw solid white;
+}
+
+.main__container2 {
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 0 200px;
+    margin: 0px auto;
+    background-color: white;
+}
+
+
 .main__footer {
     display: flex;
+    margin: auto;
+    background-color: white;
+    // align-content: center;
+    align-items: center;
     justify-content: center;
-    padding: 0px 0px 50px 0px;
-    color: $main-text;
+    padding: 0 0 50px 0;
+    // color: $main-text;
+    color: lighten($color: $primary, $amount: 15);
     font-size: 14px;
     font-family: $font-mono;
 }
@@ -27,14 +50,15 @@
     transform: translateY(0%);
 
     img {
-        filter: $icon-primary
+        filter: $icon-primary;
     }
 
     &:hover {
         transform: translateY(-5%);
 
         img {
-            filter: $icon-hover
+            // filter: $icon-hover;
+            filter: $icon-rev-color-hover;
         }
     }
 }
@@ -51,6 +75,7 @@
     left: 60px;
     bottom: 0;
     top: 0;
+    background-color: transparent;
     transition: all .3s ease-in-out;
     transform: translateY(0%);
 
@@ -60,7 +85,8 @@
 
         &:hover {
             transform: translateY(-10%);
-            filter: $icon-hover
+            // filter: $icon-hover;
+            filter: $icon-rev-color-hover;
         }
     }
 
@@ -79,6 +105,10 @@
     .main__container {
         padding: 0px 100px;
     }
+    
+    .main__container2 {
+        padding: 0px 100px;
+    }
 
     .main__arrow-up {
         right: 20px;
@@ -92,6 +122,14 @@
 
 @media (max-width: 768px) {
     .main__container {
+        padding: 0px 50px;
+    }
+    .main__separation {
+        height: 0;
+        margin-top: 50px;
+        border-top: 50px solid $primary;
+    }
+    .main__container2 {
         padding: 0px 50px;
     }
 
@@ -110,6 +148,7 @@
         right: 0;
         bottom: 0;
         margin-bottom: 20px;
+
         &::before,
         &::after {
             width: 100px;
@@ -126,6 +165,14 @@
 
 @media (max-width: 480px) {
     .main__container {
+        padding: 0px 25px;
+    }
+    .main__separation {
+        height: 0;
+        margin-top: 25px;
+        border-top: 25px solid $primary;
+    }
+    .main__container2 {
         padding: 0px 25px;
     }
 }
