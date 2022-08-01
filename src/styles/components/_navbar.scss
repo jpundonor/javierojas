@@ -6,7 +6,6 @@
     padding: 0px 50px;
     box-sizing: border-box;
     background-color: $primary;
-    // backdrop-filter: blur(10px);
     top: 0px;
     width: 100%;
     height: 100px;
@@ -44,7 +43,7 @@
         transition: all .3s ease-in-out;
 
         &:hover {
-            color: lighten($color: $light-purple, $amount: 20);
+            color: $orange;
         }
     }
 
@@ -66,7 +65,7 @@
         text-decoration: none;
 
         &:hover {
-            color: lighten($color: $light-purple, $amount: 20);
+            color: $orange;
         }
     }
 }
@@ -93,22 +92,26 @@
     .navbar__content-mobile {
         padding: 0px 20px;
         width: 100%;
-        display: flex;
+        height: auto;
         position: fixed;
+        display: flex;
+        align-items: flex-start;
         left: 0;
         right: 0;
         top: 0;
         flex-direction: column;
         margin: auto;
-        background-color: darken($color: $light-purple, $amount: 15);
+        background-color: $orange;
         box-shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.7);
-        opacity: 0.9;
-        align-items: flex-start;
+        opacity: 0.95;
         transform: translateY(70px);
         animation: slidein .3s forwards;
+        z-index: 11;
 
         a {
             padding: 10px;
+            color: white;
+            width: 100%;
 
             &:hover {
                 color: $primary;
