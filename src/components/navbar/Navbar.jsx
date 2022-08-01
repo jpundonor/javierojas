@@ -11,19 +11,19 @@ export const Navbar = () => {
   function showScroll() {
     let navScroll = document.querySelector(".navbar__head");
     navScroll.classList.toggle("navbar__head-scroll", window.scrollY > 0);
-    console.log("Scroll");
   }
   window.addEventListener("scroll", showScroll);
 
   const openMenu = () => {
     let menuNav = document.querySelector(".navbar__content");
     if (!menuIsOpen) {
-      menuNav.classList.add("navbar__content-mobile")
+      menuNav.classList.add("navbar__content-mobile");
+
       // menuNav.setAttribute("style", "display: flex", "transform: scaleY(1)");
       setMenuIcon(closeIcon);
     } else {
       // menuNav.setAttribute("style", "display: none", "transform: scaleY(0)");
-      menuNav.classList.remove("navbar__content-mobile")
+      menuNav.classList.remove("navbar__content-mobile");
       setMenuIcon(burgerIcon);
     }
     setMenuIsOpen(!menuIsOpen);
@@ -32,12 +32,17 @@ export const Navbar = () => {
   window.onclick = function (event) {
     const menu = document.getElementById("menu");
     const button = document.getElementById("button");
-      if (window.innerWidth < 768 && window.onclick && event.target !== button && event.target !== menu) {
-        // menu.setAttribute("style", "display: none", "transform: scaleY(0)");
-        menu.classList.remove("navbar__content-mobile")
-        setMenuIsOpen(false);
-        setMenuIcon(burgerIcon);
-      }
+    if (
+      window.innerWidth < 768 &&
+      window.onclick &&
+      event.target !== button &&
+      event.target !== menu
+    ) {
+      // menu.setAttribute("style", "display: none", "transform: scaleY(0)");
+      menu.classList.remove("navbar__content-mobile");
+      setMenuIsOpen(false);
+      setMenuIcon(burgerIcon);
+    }
   };
 
   return (
