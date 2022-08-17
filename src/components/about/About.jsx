@@ -1,7 +1,7 @@
 import React from "react";
 
 export const About = () => {
-  const profileImg = "/assets/img/javi2.jpg";
+  const profileImg = "/assets/img/profile.jpg";
   return (
     <section id="about">
       <div>
