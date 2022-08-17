@@ -2,7 +2,7 @@
 
 Este repositorio contendrá mi portafolio creado en React
 
-(Link pendiente)
+https://javierojas.vercel.app/
 
 Tecnologias utilizadas:
 React Js - Sass
