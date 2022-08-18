@@ -4,6 +4,7 @@ export const Navbar = () => {
   const cv = "/assets/pdf/CV-Javier-Rojas.pdf";
   const burgerIcon = "/assets/icons/menu.svg";
   const closeIcon = "/assets/icons/close.svg";
+  const logo = "/assets/icons/logo.png";
   const [menuIcon, setMenuIcon] = useState(burgerIcon);
   const [menuIsOpen, setMenuIsOpen] = useState(false);
 
@@ -49,7 +50,9 @@ export const Navbar = () => {
     <header className="navbar__head">
       <nav className="navbar__container">
         <div className="navbar__logo">
-          <a href="/#home">Home</a>
+          <a href="/#home">
+            <img className="navbar__logo-png" src={logo} alt="Logo" />
+          </a>
         </div>
         <div className="navbar__content" id="menu">
           <a href="/#about">About</a>
