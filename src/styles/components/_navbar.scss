@@ -36,17 +36,21 @@
     align-items: center;
     cursor: pointer;
     transition: all .3s ease-in-out;
-
     a {
         text-decoration: none;
-        color: $main-text;
         transition: all .3s ease-in-out;
-
-        &:hover {
-            color: $orange;
-        }
     }
 
+}
+
+.navbar__logo-png {
+    width: 30px;
+    height: 28px;
+    transition: all .3s ease-in-out;
+    filter: $icon-hover;
+    &:hover{
+        filter: $icon-orange;
+    }
 }
 
 .navbar__content {

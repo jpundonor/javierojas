@@ -57,8 +57,7 @@
         opacity: 0.7;
     }
     &:focus{
-        background-color: lighten($color: $primary, $amount: 15);
-        color: $main-text;
+        background-color: darken($color: $main-text, $amount: 5);
         &::placeholder{
             color: white;
             opacity: 0.7;
@@ -73,12 +72,12 @@
 }
 
 .contact__submit {
-    background-color: transparent;
-    border-radius: 1px;
+    background-color: lighten($color: $orange, $amount: 5);
+    border-radius: 2px;
     border: 1px solid lighten($color: $primary, $amount: 15);
     font-size: 16px;
     font-weight: bold;
-    color: $light-purple;
+    color: $white;
     padding: 10px 30px;
     cursor: pointer;
     display: flex;
@@ -87,8 +86,8 @@
     transition: all .3s ease-in-out;
 
     &:hover {
-        background-color: lighten($color: $orange, $amount: 5);
-        color: $primary;
+        background-color: transparent;
+        color: $orange;
     }
 }
 
