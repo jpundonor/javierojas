@@ -15,7 +15,7 @@ export const About = () => {
             independently.
           </p>
           <p>
-            I am currently learning on my own, although I have not yet had any
+            I am currently learning on my own, although I haven't had any
             work experience beyond my internship.
           </p>
           <p>For now, I intend to practice with small projects.</p>
