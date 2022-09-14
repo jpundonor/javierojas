@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 export const Navbar = () => {
-  const cv = "/assets/pdf/CV-Javier-Rojas.pdf";
+  const cv = "/assets/pdf/CV_Javier_Rojas.pdf";
   const burgerIcon = "/assets/icons/menu.svg";
   const closeIcon = "/assets/icons/close.svg";
   const logo = "/assets/icons/logo.png";
