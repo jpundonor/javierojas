@@ -33,7 +33,7 @@ export const Main = () => {
             <img src={github} alt="Up" />
           </a>
           <a
-            href="https://www.instagram.com/jardlml/"
+            href="https://www.instagram.com/jpundonor/"
             target="_blank"
             rel="noopener noreferrer"
           >
