@@ -26,7 +26,7 @@ export const Main = () => {
         <Contact />
         <div className="main__social-list">
           <a
-            href="https://github.com/jardlml"
+            href="https://github.com/jpundonor"
             target="_blank"
             rel="noopener noreferrer"
           >
